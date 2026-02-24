@@ -7,4 +7,6 @@ vetor_inteiros.insert(3, 4)
 
 print(vetor_inteiros)
 
+print(vetor_inteiros.index(2))
+
 
