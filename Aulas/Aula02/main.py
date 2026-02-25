@@ -30,6 +30,7 @@ elif menu == 2:
     lista_test.inserir(2)
     lista_test.inserir(3)
     print(lista_test)
+    print(lista_test.recuperar_elemento_no(0))
 
 
 
