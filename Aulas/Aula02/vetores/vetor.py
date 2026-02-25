@@ -69,6 +69,7 @@ class Vetor():
     
     def remover_elemento(self, elemento):
         posicao = self.indice(elemento)
+
         self.remover_elemento_indice(posicao)
 
 

@@ -11,9 +11,12 @@ class No():
     def elemento(self, elemento):
         self.__elemento = elemento
 
-
+    @property
+    def proximo(self):
+        return self.__proximo
+    
     @proximo.setter
     def proximo(self, elemento):
         self.__proximo = proximo
-
+    
 
