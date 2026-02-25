@@ -14,8 +14,5 @@ if menu == 1:
     vetor_test.inserir_elemento_posicao(4, 2)
     vetor_test.inserir_elemento_posicao(5, 2)
     vetor_test.inserir_elemento_final(1)
-    print(vetor_test.tamanho_vetor())
-    print(vetor_test)
-    print(vetor_test.contem(4))
-    print(f"Elemento 3 encontrado na posição {vetor_test.indice(3)}")
-    print(vetor_test)
+
+#    print(vetor_test)
