@@ -5,6 +5,33 @@ class Vetor():
         self.__posicao = 0 
 
 
+    def tamanho_vetor(self):
+        return len(self.__elementos)
+    
+
+    def __str__(self):
+        # 1 2 3 4 ...
+        return ' '.join([ str(i) for i in self.__elementos])
+        
+
+    def contem(self, elemento):
+        #1,2,4,3 
+        #5
+        for i in range(self.tamanho_vetor()):
+            elem = self.listar_elemento(i)
+            if elem == elemento:
+                return True
+        return False
+
+
+    def indice(self, elemento):
+        for i in range(self.tamanho_vetor()):
+            elem = self.listar_elemento(i)
+            if elem == elemento:
+                return i
+        return -1
+
+
     def inserir_elemento_posicao(self, elemento, posicao):
         # 1 2 3 
         # 1,2,4,3
@@ -19,7 +46,8 @@ class Vetor():
 
 
     def inserir_elemento_final(self, elemento):
-        if self.__posicao >= len(self.__elementos):
+        if self.__posicao >= self.tamanho_vetor():  
+
             self.__elementos = self.__elementos + [None]
 
         #1, 2, 3
