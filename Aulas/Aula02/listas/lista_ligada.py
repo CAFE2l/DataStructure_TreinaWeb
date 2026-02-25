@@ -20,3 +20,12 @@ class ListaLigada():
 
     def esta_vazia(self):
         return self.__tamanho == 0
+        
+
+    def __str__(self):
+        temp = self.__primeiro_no
+        elementos = ''
+        while(temp):
+            elementos = f"{elementos} {temp.elemento}"
+            temp = temp.proximo
+        return elementos
