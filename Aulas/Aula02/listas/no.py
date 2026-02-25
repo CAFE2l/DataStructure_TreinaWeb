@@ -16,7 +16,7 @@ class No():
         return self.__proximo
     
     @proximo.setter
-    def proximo(self, elemento):
+    def proximo(self, proximo):
         self.__proximo = proximo
     
 

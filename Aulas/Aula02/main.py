@@ -1,5 +1,7 @@
 from array import array 
 from vetores import vetor
+from listas import lista_ligada 
+
 print(30 * "-", "MENU", 30 * "-")
 print("1. Vetores")
 print("2. Listas Ligadas")
@@ -14,5 +16,15 @@ if menu == 1:
     vetor_test.inserir_elemento_posicao(4, 2)
     vetor_test.inserir_elemento_posicao(5, 2)
     vetor_test.inserir_elemento_final(1)
+    print(vetor_test.tamanho_vetor())
+    print(vetor_test)
+    print(vetor_test.indice(4))
+    print(vetor_test.remover_elemento_indice(3))
+    print(vetor_test)
+    vetor_test.remover_elemento(5)
+    print(vetor_test)
 
-#    print(vetor_test)
+elif menu == 2:
+    lista_test = lista_ligada.ListaLigada()
+    lista_test.inserir(1)
+    lista_test.inserir(2)
