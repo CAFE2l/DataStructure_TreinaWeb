@@ -1,6 +1,6 @@
 from array import array 
 from vetores import vetor
-from listas import lista_ligada,lista_duplamente_ligada
+from listas import lista_ligada, lista_duplamente_ligada
 
 print(30 * "-", "MENU", 30 * "-")
 print("1. Vetores")
@@ -47,7 +47,8 @@ elif menu == 3:
     lista_test.inserir(3)
     lista_test.inserir_posicao(1, 10)
     print(lista_test)
-    lista_test.remover_elemento(2)
+    # lista_test.remover_elemento(2)
+    lista_test.remover_posicao(2)
     print(lista_test)
 
 

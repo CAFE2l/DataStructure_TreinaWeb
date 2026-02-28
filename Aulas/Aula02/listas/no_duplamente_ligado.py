@@ -3,6 +3,7 @@ class NoDuplamenteLigado():
         self.__elemento = elemento
         self.__proximo = proximo 
         self.__anterior = anterior
+
     @property
     def elemento(self):
         return self.__elemento
@@ -10,6 +11,7 @@ class NoDuplamenteLigado():
     @elemento.setter
     def elemento(self, elemento):
         self.__elemento = elemento
+
 
     @property
     def proximo(self):
@@ -24,6 +26,6 @@ class NoDuplamenteLigado():
     def anterior(self):
         return self.__anterior
     
-    @proximo.setter
+    @anterior.setter
     def anterior(self, anterior):
         self.__anterior = anterior
