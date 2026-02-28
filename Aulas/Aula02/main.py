@@ -2,12 +2,15 @@ from array import array
 from vetores import vetor
 from listas import lista_ligada, lista_duplamente_ligada
 from pilhas import pilha
+from filas import fila
 
 print(30 * "-", "MENU", 30 * "-")
 print("1. Vetores")
 print("2. Listas Ligadas")
 print("3. Listas Duplamente Ligadas")
 print("4. Pilhas")
+print("5. Filas")
+
 menu = int(input("Digite a opção deseja: "))
 
 if menu == 1:
@@ -59,3 +62,19 @@ elif menu == 4:
     pilha_test.empilhar(5)
     # pilha_test.empilhar(6)
     print(pilha_test.desempilhar())
+
+
+
+elif menu == 5:
+    fila_test = fila.Fila()
+    fila_test.enfileirar(1)
+    fila_test.enfileirar(2)
+    fila_test.enfileirar(3)
+    fila_test.enfileirar(4)
+    print(fila_test) # 1 2 3 4 
+    print(fila_test.desenfileirar())
+    print(fila_test)
+    fila_test.enfileirar(6)
+    print(fila_test)
+else:
+    print("opcao invalida")
