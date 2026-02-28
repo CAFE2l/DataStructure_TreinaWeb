@@ -1,10 +1,11 @@
 from array import array 
 from vetores import vetor
-from listas import lista_ligada 
+from listas import lista_ligada,lista_duplamente_ligada
 
 print(30 * "-", "MENU", 30 * "-")
 print("1. Vetores")
 print("2. Listas Ligadas")
+print("3. Listas Duplamente Ligadas")
 
 menu = int(input("Digite a opção deseja: "))
 
@@ -29,10 +30,25 @@ elif menu == 2:
     lista_test.inserir(1)
     lista_test.inserir(2)
     lista_test.inserir(3)
+    lista_test.inserir_posicao(1, 10)
     print(lista_test)
-    print(lista_test.recuperar_elemento_no(0))
+    lista_test.remover_elemento(2)
+    print(lista_test)
+    # print(lista_test)
+    # print(lista_test.contem(2))
+    #print(f"O elemento 3 esta na posição {lista_test.indice(3)}")
+    # print(lista_test.recuperar_elemento_no(0))
 
 
+elif menu == 3:
+    lista_test = lista_duplamente_ligada.ListaDuplamenteLigada()
+    lista_test.inserir(1)
+    lista_test.inserir(2)
+    lista_test.inserir(3)
+    lista_test.inserir_posicao(1, 10)
+    print(lista_test)
+    lista_test.remover_elemento(2)
+    print(lista_test)
 
 
 

@@ -1,6 +1,6 @@
-from .no import No
+from .no_duplamente_ligado import NoDuplamenteLigado
 
-class ListaLigada():
+class ListaDuplamenteLigada():
     def __init__(self):
         self.__primeiro_no = None
         self.__ultimo_no = None
@@ -8,12 +8,13 @@ class ListaLigada():
 
     
     def inserir(self, elemento):
-        novo_no = No(elemento)
+        novo_no = NoDuplamenteLigado(elemento)
         if self.esta_vazia():
             self.__primeiro_no = novo_no
             self.__ultimo_no = novo_no
         else:
             self.__ultimo_no.proximo = novo_no
+            novo_no.anterior = self.__ultimo_no
             self.__ultimo_no = novo_no
         self.__tamanho += 1
 
@@ -22,17 +23,21 @@ class ListaLigada():
         if posicao == 0:
             novo_no = No(elemento)
             novo_no.proximo = self.__primeiro_no
+            self.__primeiro_no.anterior = novo_no
             self.__primeiro_no = novo_no
         elif posicao == self.__tamanho: 
             novo_no = No(elemento)
             self.__ultimo_no.proximo = novo_no
+            novo_no.anterior = self.__ultimo_no
             self.__ultimo_no = novo_no
         else:
             no_anterior = self.recuperar_no(posicao - 1)
             no_atual = self.recuperar_no(posicao)
-            novo_no = No(elemento)
+            novo_no = NoDuplamenteLigado(elemento)
             no_anterior.proximo = novo_no
             novo_no.proximo = no_atual
+            no_atual.anterior = novo_no
+            novo_no.anterior = no_anterior
         self.__tamanho += 1
     
     def contem(self, elemento):
